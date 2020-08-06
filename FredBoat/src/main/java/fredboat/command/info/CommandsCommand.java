@@ -116,7 +116,7 @@ public class CommandsCommand extends Command implements IInfoCommand {
                 .filter(command -> {
                     if (command instanceof ICommandRestricted) {
                         if (((ICommandRestricted) command).getMinimumPerms().getLevel() >= PermissionLevel.BOT_ADMIN.getLevel()) {
-                            return PermsUtil.checkPerms(PermissionLevel.BOT_ADMIN, context.invoker);
+                            return PermsUtil.checkPerms(PermissionLevel.ADMIN, context.invoker);
                         }
                     }
                     return true;
